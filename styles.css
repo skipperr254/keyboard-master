@@ -1,4 +1,4 @@
-/* @import url("https://fonts.googleapis.com/css?family=Roboto+Mono&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Roboto+Mono&display=swap");
 
 * {
     margin: 0;
@@ -7,24 +7,51 @@
 }
 
 body {
-    margin: 0;
-    padding: 2rem;
-    height: 100vh;
-    font-family: "Roboto Mono";
+    font-family: 'Roboto Mono';
 }
 
-.wrapper {
+#wrapper {
     max-width: 800px;
     min-width: 600px;
     margin: 0 auto;
-    display: grid;
-    grid-auto-flow: row;
-    /* grid-template-rows: 2rem auto 1rem; */
-    height: 100%;
-    gap: 1rem;
-    /* margin-top: 1rem; */
-    /* margin-bottom: 1rem; */
-    align-items: center;
-    z-index: 999;
-    grid-template-rows: 1fr auto;
-  } */
+    position: relative;
+}
+
+#words {
+    display: flex;
+    flex-wrap: wrap;
+    font-size: 1.5rem;
+}
+
+.word {
+    margin: 5px 5px;
+}
+
+.word.active {
+    color: #444;
+}
+
+#caret {
+    width: 2px;
+    height: 2rem;
+    background-color: black;
+    position: absolute;
+    /* animation-name: caretFlash;
+    animation-timing-function: cubic-bezier(0.455, 0.03, 0.515, 0.955);
+    animation-iteration-count: infinite;
+    animation-duration: 1s;
+    transition: 0.05s; */
+    /* left: 30px; */
+}
+
+@keyframes caretFlash {
+    0% {
+      background: transparent;
+    }
+    50% {
+      background: var(--caret-color);
+    }
+    100% {
+      background: transparent;
+    }
+  }
