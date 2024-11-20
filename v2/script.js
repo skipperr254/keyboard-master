@@ -1,7 +1,5 @@
 import { GoogleGenerativeAI } from "@google/generative-ai"
 
-const GOOGLE_AI_STUDIO_API_KEY = "AIzaSyDHBJyiciAAjvDhVVTEGiaepLS8G0FEUPQ"
-
 const generatedTextCounter = 0
 const wordsList = []
 const currentWordIndex = 20
